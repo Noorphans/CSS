@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 我想把ol里的li变为红色 */
+    ol li {
+      color: red;
+    }
+
+    /* 选择 ul 里面所有的 li标签元素 */
+    ul li {
+      color: pink;
+    }
+
+    /* 元素2 可以是儿子，也可以是孙子等,只要是元素1 的后代即可 */
+    /* 如中国山东济南 从父级开始查找 */
+    ol li a {
+      color: burlywood;
+      text-decoration: none;
+    }
+
+    /* 元素1 和 元素2 可以是任意基础选择器 */
+    .nav li a {
+      color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <ol>
+    <li>我是ol 的孩子</li>
+    <li>我是ol 的孩子</li>
+    <li>我是ol 的孩子</li>
+    <li><a href="#">我是孙子</a></li>
+  </ol>
+
+  <ul>
+    <li>我是ul 的孩子</li>
+    <li>我是ul 的孩子</li>
+    <li>我是ul 的孩子</li>
+    <li><a href="#">这个a标签不会有变化</a></li>
+  </ul>
+
+  <ul class="nav">
+    <li>我是ul 的孩子</li>
+    <li>我是ul 的孩子</li>
+    <li>我是ul 的孩子</li>
+    <li><a href="#">加类名有变化</a></li>
+    <li><a href="#">加类名有变化</a></li>
+    <li><a href="#">加类名有变化</a></li>
+  </ul>
+</body>
+
+</html>
