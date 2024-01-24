@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      /* div不给宽度 默认父级body宽度 */
+
+      /* width: 200px; */
+      height: 200px;
+      background-color: plum;
+    }
+  </style>
+</head>
+
+<body>
+  <div>div比较霸道，自己独占一行</div>瑟瑟发抖
+
+  <!-- 调试工具里检查就有问题 代码里只有一个p，外面生成两个p-->
+  <p>
+  <div>这里有问题</div>
+  </p>
+</body>
+
+</html>

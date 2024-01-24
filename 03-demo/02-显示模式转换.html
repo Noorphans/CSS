@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    a {
+      /* 行内元素a 转为块元素 可设置宽高 */
+      display: block;
+
+      text-decoration: none;
+      width: 400px;
+      height: 100px;
+      background-color: paleturquoise;
+    }
+
+    div {
+      /* 块级元素div 转为行内元素 */
+      display: inline;
+
+      /* 转为行内元素 宽高设置无效 */
+      width: 600px;
+      height: 200px;
+
+      background-color: red;
+    }
+
+    span {
+      width: 300px;
+      height: 20px;
+      background-color: blanchedalmond;
+
+      /*行内元素 转为行内快元素 可设置宽高  display理解为转换*/
+      display: inline-block;
+
+    }
+
+
+    .a2 {
+      width: 300px;
+      height: 20px;
+      background-color: blanchedalmond;
+      display: inline-block;
+    }
+
+
+    /* 行内块级元素 转为 块级元素 独占一行 */
+    input {
+      width: 300px;
+      height: 80px;
+      background-color: palegoldenrod;
+      display: block;
+    }
+
+    td {
+      border: 1px solid pink;
+      width: 320px;
+      height: 100px;
+      /* display: block; */
+
+      /* 行内块 转为 行内 */
+      display: inline;
+    }
+
+    /* 块级 转 行内块元素 */
+    h2 {
+      width: 300px;
+      height: 50px;
+      color: brown;
+      background-color: palegoldenrod;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 将 <a> 元素的 display 属性设置为 block 或 inline-block -->
+  <!-- 这样它就会表现为块级元素或行内块级元素，而不再是默认的行内元素。 -->
+  <a href="#">行内元素a 转为块级元素 可设置宽高且独占一行</a>
+
+  <div>块级元素转行内元素 宽高设置无效</div>
+
+  <span>span行内元素 转为行内块元素 </span>
+  <a href="#" class="a2">在一行 有空隙 宽高可设置</a>
+
+  <input type="text" placeholder="行内块级元素input 转为块元素独占一行">
+  <input type="text" placeholder="行内块级元素input 转为块元素独占一行">
+
+
+  <table>
+    <tr>
+      <td>行内块级元素td 转为块元素独占一行</td>
+      <td>行内块级元素td 转为块元素独占一行</td>
+      <td>行内块级元素td 转为块元素独占一行</td>
+    </tr>
+  </table>
+
+  <h2>块级 转 行内块元素</h2>
+  <h2>块级 转 行内块元素</h2>
+</body>
+
+</html>
