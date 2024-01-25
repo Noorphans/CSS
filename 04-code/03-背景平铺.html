@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      /* 设置相等的宽高或者特定比例可以确保图片在调整大小时保持正确的外观 */
+      width: 300px;
+      height: 300px;
+      /* 添加背景图片 */
+      background-image: url(../images/logo.png);
+
+      /* 页面元素既可以添加背景颜色也可以添加背景图片 只不过背景图片会压住背景颜色 */
+      background-color: plum;
+
+      /* 1.背景图片默认都是平铺的 */
+      /* background-repeat: repeat; */
+
+      /* 2.背景图片不平铺 */
+      /* background-repeat: no-repeat; */
+
+      /* 3.沿着x轴 横向平铺 */
+      /* background-repeat: repeat-x; */
+
+      /* 沿着y轴 纵向平铺 */
+      background-repeat: repeat-y;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+</body>
+
+</html>
