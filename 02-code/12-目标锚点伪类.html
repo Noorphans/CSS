@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 默认状态下的目标元素样式 */
+    section {
+      /* 隐藏 */
+      display: none;
+    }
+
+    /* 选择当前活动的目标元素，并显示其内容 */
+    section:target {
+      /* 显示 */
+      width: 300px;
+      height: 100px;
+      display: block;
+      background-color: pink;
+      border: 2px solid skyblue;
+      color: gray;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="#section1">Section 1</a></li>
+      <li><a href="#section2">Section 2</a></li>
+      <li><a href="#section3">Section 3</a></li>
+    </ul>
+  </nav>
+
+  <section id="section1">
+    <h3>Section 1</h3>
+    <p>This is the content of Section 1.</p>
+  </section>
+
+  <section id="section2">
+    <h3>Section 2</h3>
+    <p>This is the content of Section 2.</p>
+  </section>
+
+  <section id="section3">
+    <h3>Section 3</h3>
+    <p>This is the content of Section 3.</p>
+  </section>
+</body>
+
+</html>

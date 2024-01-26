@@ -559,11 +559,10 @@
 
 2. 因为**伪类选择器很多**，比如有链接伪类、结构伪类等，所以这里以常用的**链接伪类选择器为例**
 
-3. 语法：伪类选择器书写最大的特点是**用冒号（:）表示**，比如 :hover 、 :first-child 
+3. 语法：伪类选择器书写最大的特点是**用冒号（:）表示**，比如 `:hover` 、 **:first-child**  、 **:nth-child(n)** 等等。
 
-4. 目标：能够写出伪类选择器的使用规范   
+4. 目标：能够写出伪类选择器的使用规范
 
-    
 
 
 
@@ -571,12 +570,8 @@
 
 #### 链接伪类选择器(常用)
 
-链接伪类有四个：
-
-1. a:link	    选择所有未被访问过的链接(没有点击过的链接)
-2. a:visited	 选择所有已访问过的链接(点击过的链接)
-3. a:hover	   选择鼠标指针位于其上的链接(鼠标经过的那个链接)
-4. a:active	  选择活动链接(鼠标正在按下还未弹起鼠标的那个链接)
+1. `a:link`	    选择所有未被访问过的链接(没有点击过的链接)
+2. `a:visited`	 选择所有已访问过的链接(点击过的链接)
 
 
 
@@ -594,7 +589,27 @@
     a:visited {
       color: antiquewhite;
     }
+  </style>
+</head>
+```
 
+
+
+
+
+
+
+#### 链接-基本状态伪类选择器(常用)
+
+1. `a:hover`	   选择鼠标指针位于其上的链接(鼠标经过的那个链接)
+2. `a:active`	  选择活动链接(鼠标正在按下还未弹起鼠标的那个链接,鼠标点击时)
+
+
+
+\- 举例说明：
+
+```html
+<style>
     /* a:hover 选择鼠标经过的那个链接 */
     a:hover {
       color: pink;
@@ -618,7 +633,7 @@
 
 
 
-##### 链接伪类选择器注意事项
+#### 链接伪类选择器注意事项
 
  > **注：**
  >
@@ -656,7 +671,7 @@
 
 
 
-##### 链接伪类选择器实际工作开发中的写法
+#### 链接伪类选择器实际工作开发中的写法
 
 * 实际开发中先给a链接写一个样式，然后再给鼠标经过a:hover写一个样式即可
 
@@ -688,18 +703,272 @@
 
 
 
+> **注：** 要为**多个链接设置不同的伪类选择器**，您可以通过为每个链接**添加唯一的类或ID**，并使用相应的选择器来为其应用样式。
+
+\- 举例说明：
+
+```html
+ <style>
+    .nav a {
+      text-decoration: none;
+      display: inline-block;
+      background-color: skyblue;
+      width: 120px;
+      height: 58px;
+      /* 行高小于高度 文字偏上 */
+      line-height: 48px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .nav .bg1 {
+      background: url(../images/demo-img/bg1.png) no-repeat;
+    }
+
+    .nav .bg2 {
+      background: url(../images/demo-img/bg2.png) no-repeat;
+    }
+
+
+    /* 分别添加伪类选择器 */
+    .nav .bg1:hover {
+      background-image: url(../images/demo-img/bg11.png);
+    }
+
+    .nav .bg2:hover {
+      background-image: url(../images/demo-img/bg22.png);
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <a href="#" class="bg1">五彩导航</a>
+    <a href="#" class="bg2">五彩导航</a>
+  </div>
+</body>
+```
 
 
 
 
-####  :focus 伪类选择器
 
-1. **:focus 伪类选择器** 用于选取获得焦点的表单元素。(同Web APIs之Dom事件基础的焦点事件)
-2. 焦点就是光标，一般情况 < input> 类表单元素才能获取，因此这个选择器也**主要针对于表单元素**来说。
 
-![image-20240122161254823](http://images.newstar.net.cn/sally-imgsimage-20240122161254823.png) 
 
-解析： 查看input表单是否被选中？有没有光标？ 如果有，就可以更换背景颜色了。也就是*把获得光标的input表单元素选取出来* 
+
+
+#### :focus伪类选择器
+
+* **:focus**     获取焦点状态
+
+* 用于选取获得焦点的表单元素，常是通过键盘导航或点击输入框。也就是可用于为获取焦点的输入框应用样式(同Web APIs之Dom事件基础的焦点事件)
+
+> `:focus` 既可以归类为**表单伪类**，也可以归类为**基本状态伪类**，具体取决于它被用于选择的元素。
+
+1. 焦点就是光标，**一般情况 < input> 类表单元素才能获取**，因此这个选择器也**主要针对于表单元素**来说。
+
+
+
+\- 举例说明：
+
+```html
+  <style>
+    /* 定义输入框样式 */
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #ccc;
+    }
+
+    /* 定义获取焦点时的输入框样式 */
+    input:focus {
+      /* 光标和输入文字 颜色 */
+      color: orange;
+
+      /* 背景颜色 */
+      background-color: antiquewhite;
+
+      /* 边框 */
+      border: 2px solid skyblue;
+
+      /* 移除默认的焦点样式，避免出现双边框 */
+      outline: none;
+
+    }
+  </style>
+</head>
+
+<body>
+  <label for="username">用户名：</label>
+  <input type="text" id="username" placeholder="请输入用户名">
+
+  <label for="password">密码：</label>
+  <input type="password" id="password" placeholder="请输入密码">
+</body>
+```
+
+**解析：**定义获取焦点时输入框样式，当用户点击输入框并开始输入时，边框颜色将从灰变蓝，提供视觉反馈，告诉用户当前输入框处于活动状态。
+
+
+
+
+
+2. 当 `:focus` 用于非表单元素时，它可以用于为页面中的`其他元素在获取焦点时`应用样式。
+
+```html
+  <style>
+    /* 定义 div 元素样式 */
+    div {
+      padding: 20px;
+      background-color: #eee;
+      margin-bottom: 10px;
+    }
+
+    /* 定义获取焦点时的 div 元素样式 */
+    div:focus {
+      background-color: lightblue;
+      outline: none;
+      /* 移除默认的焦点样式，避免出现双边框 */
+    }
+  </style>
+  </style>
+</head>
+
+<body>
+  <h2>非表单元素示例</h2>
+
+  <!-- tabindex="0"，这使得它们能够接收键盘焦点；contenteditable="true"，使其可以接收用户的编辑。 -->
+  <div tabindex="0" contenteditable="true">
+    这是一个可以获得焦点并编辑的 div 元素。
+  </div>
+
+  <div tabindex="0">
+    这是另一个可以获得焦点的 div 元素。
+  </div>
+```
+
+**解析：**
+
+1. 两个 `<div>` 元素都设置`tabindex="0"`，使得它们能够接收键盘焦点。
+2. 而其中一个 `<div>` 设置了 `contenteditable="true"`，使其可以接收用户的编辑。
+3. `:focus` 定义了在获取焦点时 `<div>` 元素样式。当用户点击某个 `<div>` 元素时，其背景颜色将从灰变为淡蓝。
+
+
+
+
+
+
+
+#### 位置伪类选择器
+
+1. `:first-child`     选择元素的第一个子元素
+2. `:last-child`      选择元素的最后一个子元素
+3. `:nth-child(n)`    选择元素的第n个子元素
+
+
+
+\- 举例说明：
+
+```html
+  <style>
+    /* 选择父元素下的第一个子元素 */
+    li:first-child {
+      font-weight: bold;
+    }
+
+    /* 选择父元素下的第3个子元素 */
+    li:nth-child(3) {
+      background-color: #ffeeba;
+    }
+
+    /* 选择父元素下的最后一个子元素 */
+    li:last-child {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>第一个列表项</li>
+    <li>第二个列表项</li>
+    <li>第三个列表项</li>
+    <li>最后一个列表项</li>
+  </ul>
+</body>
+```
+
+![image-20240126165510399](http://images.newstar.net.cn/sally-imgsimage-20240126165510399.png) 
+
+
+
+
+
+
+
+#### 目标伪类
+
+`:target` - 选择当前活动的目标元素（通常与锚点链接一起使用）
+
+
+
+\- 举例说明：
+
+```html
+  <style>
+    /* 默认状态下的目标元素样式 */
+    section {
+      /* 隐藏 */
+      display: none;
+    }
+
+    /* 选择当前活动的目标元素，并显示其内容 */
+    section:target {
+      /* 显示 */
+      display: block;
+      background-color: pink;
+      border: 2px solid skyblue;
+      color: gray;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="#section1">Section 1</a></li>
+      <li><a href="#section2">Section 2</a></li>
+      <li><a href="#section3">Section 3</a></li>
+    </ul>
+  </nav>
+
+  <section id="section1">
+    <h3>Section 1</h3>
+    <p>This is the content of Section 1.</p>
+  </section>
+
+  <section id="section2">
+    <h3>Section 2</h3>
+    <p>这是:target实现单页面导航的效果</p>
+  </section>
+
+  <section id="section3">
+    <h3>Section 3</h3>
+    <p>This is the content of Section 3.</p>
+  </section>
+</body>
+```
+
+**解析：**
+
+1. 有三个部分（Section 1、Section 2、Section 3）和一个导航菜单，每个部分都有一个唯一的 `id`，并且导航菜单中的链接带有相应的锚点。
+2. `:target` 伪类，选择当前活动的目标元素，并为其定义样式。
+3. 被点击的导航链接所指向的部分将显示边框、填充和其他样式，而其他部分将处于隐藏状态
+4. `display: none;` 是用于隐藏 `section` 元素。`:target` 伪类的规则中的 `display: block;` 是用于显示当前被选中的 `section` 元素。
+
+![image-20240126171219273](C:\Users\Sally\AppData\Roaming\Typora\typora-user-images\image-20240126171219273.png) 
 
 
 

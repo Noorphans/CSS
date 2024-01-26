@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 定义 div 元素样式 */
+    div {
+      padding: 20px;
+      background-color: #eee;
+      margin-bottom: 10px;
+    }
+
+    /* 定义获取焦点时的 div 元素样式 */
+    div:focus {
+      background-color: lightblue;
+      outline: none;
+      /* 移除默认的焦点样式，避免出现双边框 */
+    }
+  </style>
+  </style>
+</head>
+
+<body>
+  <h2>非表单元素示例</h2>
+
+  <!-- tabindex="0"，这使得它们能够接收键盘焦点；contenteditable="true"，使其可以接收用户的编辑。 -->
+  <div tabindex="0" contenteditable="true">
+    这是一个可以获得焦点并编辑的 div 元素。
+  </div>
+
+  <div tabindex="0">
+    这是另一个可以获得焦点的 div 元素。
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 定义输入框样式 */
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #ccc;
+    }
+
+    /* 定义获取焦点时的输入框样式 */
+    input:focus {
+      /* 光标和输入文字 颜色 */
+      color: orange;
+
+      /* 背景颜色 */
+      background-color: antiquewhite;
+
+      /* 边框 */
+      border: 2px solid skyblue;
+
+      /* 移除默认的焦点样式，避免出现双边框 */
+      outline: none;
+
+    }
+  </style>
+</head>
+
+<body>
+  <label for="username">用户名：</label>
+  <input type="text" id="username" placeholder="请输入用户名">
+
+  <label for="password">密码：</label>
+  <input type="password" id="password" placeholder="请输入密码">
+</body>
+
+</html>
