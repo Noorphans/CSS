@@ -69,7 +69,7 @@
 
 * 所有的样式，都包含在 < style> 标签内，表示是样式表。< style> 一般写到 < /head> 上方。
 
-```html
+```CSS
 <head>
  <style>
  h4 {

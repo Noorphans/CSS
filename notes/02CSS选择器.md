@@ -51,7 +51,7 @@
 
 3. 语法：
 
-```html
+```CSS
 标签名 {
 	属性1: 属性值1;
 	属性2: 属性值2;
@@ -102,7 +102,7 @@
 * **口诀:** 样式`点`定义 结构`类(class)`调用 一个或多个 开发最常用
 * 语法：
 
-```html
+```CSS
 .类名 {
 	属性1: 属性值1
 	...
@@ -254,7 +254,7 @@
 * HTML 元素以 `id 属性`来设置 id 选择器，CSS 中 id 选择器以“`#`" 来定义。
 * 语法：
 
-```html
+```css
 #id名 {
 	属性1: 属性值1;
 	...
@@ -423,7 +423,7 @@
 
 ![image-20240122113918772](http://images.newstar.net.cn/sally-imgsimage-20240122113918772.png) 
 
-```html
+```CSS
  <style>
     /* 只要是后代就行 但建议写全 */
     .nav ul li a {
@@ -482,7 +482,7 @@
 
  ![image-20240122115033048](http://images.newstar.net.cn/sally-imgsimage-20240122115033048.png)
 
-```html
+```CSS
  <style>
     .hot>a {
       color: red;
@@ -577,7 +577,7 @@
 
 \- 举例说明：
 
-```html
+```CSS
 <style>
     /* 未被访问过的链接 a:link 把没有点击过的链接选出来 */
     a:link {
@@ -590,7 +590,6 @@
       color: antiquewhite;
     }
   </style>
-</head>
 ```
 
 

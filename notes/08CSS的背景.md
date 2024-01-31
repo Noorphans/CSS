@@ -516,7 +516,7 @@
 
   ![image-20240125194629616](C:\Users\Sally\AppData\Roaming\Typora\typora-user-images\image-20240125194629616.png) 
 
-  ```html
+  ```css
   <style>
       body {
         /* background: transparent url(../images/logo.png) no-repeat fixed right 80px; */

@@ -1,5 +1,9 @@
 # CSS的引入方式
 
+[toc]
+
+
+
 ## CSS的三种样式表
 
 目标：能够说出CSS的三种引入方式
@@ -20,7 +24,7 @@
 
 内部样式表：又称内嵌样式表，是写到html页面内部，是将所有的 CSS 代码抽取出来，单独放到一个 < style> 标签中
 
-```html
+```css
 <style>
  div {
  color: red;
@@ -65,7 +69,7 @@
 
 行内样式表：又称**内联样式**表，是`在元素标签内部的style属性中设定 CSS 样式`。适合于修改简单样式
 
-```html
+```css
 <div style="color: red; font-size: 12px;">青春不常在，抓紧谈恋爱</div>
 ```
 
@@ -98,7 +102,7 @@
   1. 新建一个后缀名为 .css 的样式文件，把所有 CSS 代码都放入此文件中。
   2. 在 HTML 页面中，使用< link> 标签引入这个文件。
 
-  ```html
+  ```css
   <link rel="stylesheet" href="css文件路径">
   ```
 
