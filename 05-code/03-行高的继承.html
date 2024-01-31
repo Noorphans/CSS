@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      color: pink;
+
+      /* 行高跟单位继承 */
+      /* font: 12px/24px 'Microsoft YaHei'; */
+
+      /* 行高不带单位继承 */
+      font: 12px/1.5 'Microsoft YaHei';
+    }
+
+    div {
+      /* 子元素继承了父元素body 的行高1.5 */
+      /* 也就是当前子元素的文字大小font-size 的1.5倍，21像素  */
+      font-size: 14px;
+    }
+
+    p {
+      /* 1.5*16 =24*/
+      font-size: 16px;
+    }
+
+    /* 没有手动指定文字大小 继承父元素body的12px，行高也继承body的1.5 */
+    /* 所以当前li的行高就是 1.5*12  */
+  </style>
+</head>
+
+<body>
+  <!-- 继承body的样式 -->
+  <div>青少年</div>
+  <p>青少年</p>
+  <ul>
+    <li>没有指定文字大小</li>
+  </ul>
+</body>
+
+</html>
