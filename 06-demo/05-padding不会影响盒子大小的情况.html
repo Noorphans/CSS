@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1 {
+      /* 不指定宽度默认是父元素body宽度 */
+
+      /*设置宽度的话左右30px 宽度加60px ，宽度已经和父元素一样宽不用100%*/
+      /* width: 100%; */
+
+      /* 只给高度 高度变成260 宽度不会变化 */
+      height: 200px;
+      background-color: pink;
+      padding: 30px;
+    }
+
+    div {
+      width: 300px;
+      height: 100px;
+      background-color: purple;
+    }
+
+
+    div p {
+      /* 继承div300的宽度 所以不会撑大  */
+      padding: 30px;
+      background-color: skyblue;
+    }
+  </style>
+</head>
+
+<body>
+  <h1></h1>
+  <div>
+    <p></p>
+  </div>
+</body>
+
+</html>
