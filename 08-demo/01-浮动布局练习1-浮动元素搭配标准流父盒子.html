@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>浮动元素搭配标准流父盒子1</title>
+  <style>
+    .box {
+      width: 1200px;
+      height: 460px;
+      background-color: pink;
+      margin: 0 auto;
+    }
+
+    .left {
+      float: left;
+      width: 230px;
+      height: 460px;
+      background-color: plum;
+    }
+
+    .right {
+      float: left;
+      /* 父级宽度装不下这些浮动的盒子，多出的盒子会另起一行对齐 */
+      /* width: 980px; */
+      width: 970px;
+      height: 460px;
+      background-color: skyblue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="left">浮动盒子1</div>
+    <div class="right">浮动盒子2</div>
+  </div>
+</body>
+
+</html>

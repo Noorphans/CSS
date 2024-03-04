@@ -1,0 +1,473 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 1.确定版心宽度  并水平居中对齐 w位置简写*/
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #f3f5f7;
+    /* 用来暂时测试 后期再删除 */
+    /* height: 30000px; */
+}
+
+/* 清除列表圆点 */
+li {
+    list-style: none;
+}
+
+/* 清除链接下划线 */
+a {
+    text-decoration: none;
+}
+
+/* 清除浮动 避免影响下面的布局 */
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+
+
+/* 1.头部的宽高 边距 */
+.header {
+    height: 42px;
+    /* background-color: pink; */
+    /*此处外边距层叠 w里面的外边距 上下30 左右居中*/
+    margin: 30px auto;
+}
+
+.logo {
+    float: left;
+    width: 198px;
+    height: 42px;
+    /* background-color: plum; */
+}
+
+/* 导航栏部分 */
+.nav {
+    float: left;
+    margin-left: 60px;
+}
+
+/* 小li */
+.nav ul li {
+    float: left;
+    margin: 0 15px;
+}
+
+/* 小li里面的a链接 */
+.nav ul li a {
+    display: block;
+    height: 42px;
+    padding: 0 10px;
+    line-height: 42px;
+    font-size: 18px;
+    color: #050505;
+}
+
+/* 小li里面的a添加伪链接 */
+.nav ul li a:hover {
+    border-bottom: 2px solid #00a4ff;
+    color: #00a4ff;
+}
+
+/* 搜索模块 */
+.search {
+    float: left;
+    width: 412px;
+    height: 42px;
+    background-color: skyblue;
+    margin-left: 70px;
+}
+
+/* input文本框高度上下减去1像素为40 */
+.search input {
+    float: left;
+    /* 加了内边距15会撑开盒子，所以总体宽度减去15 */
+    width: 345px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+    border-right: 0;
+    color: #bfbfbf;
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+/* button按钮 */
+.search button {
+    float: left;
+    width: 50px;
+    height: 42px;
+    /* 按钮button默认有个边框需要我们手动去掉 */
+    border: 0;
+    /* border-color: #00a4ff; */
+    background: url(../04-study/images/btn.png);
+}
+
+.user {
+    float: right;
+    line-height: 42px;
+    margin-right: 30px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* 2. banner区域 */
+.banner {
+    height: 421px;
+    background-color: #1c036c;
+}
+
+/* banner里面的位置w */
+.banner .w {
+    height: 421px;
+    background: url(../04-study/images/banner2_20190819_210028.png) no-repeat top center;
+}
+
+/* banner里的测导航栏 */
+.subnav {
+    float: left;
+    width: 190px;
+    height: 421px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* 小li样式*/
+.subnav ul li {
+    height: 45px;
+    line-height: 45px;
+    padding: 0 20px;
+}
+
+/* a链接文字样式 */
+.subnav ul li a {
+    font-size: 14px;
+    color: #fff;
+}
+
+
+/* 箭头 */
+.subnav ul li a span {
+    float: right;
+}
+
+.subnav ul li a:hover {
+    color: #00a4ff;
+}
+
+/* 课程表模块 */
+/* 大盒子 */
+.course-hd {
+    float: right;
+    width: 228px;
+    height: 300px;
+    background-color: #fff;
+    /* 浮动的盒子不会有外边距合并的问题 */
+    margin-top: 50px;
+}
+
+/* 2号盒子头部head */
+.course-hd h2 {
+    height: 48px;
+    background-color: #9bceea;
+    text-align: center;
+    line-height: 48px;
+    font-size: 18px;
+    color: #fff;
+}
+
+/* 3号盒子 body */
+.course-bd {
+    padding: 0 20px;
+}
+
+.course-bd ul li {
+    padding: 14px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.course-bd ul li h4 {
+    font-size: 16px;
+    color: #4e4e4e;
+}
+
+.course-bd ul li p {
+    font-size: 12px;
+    color: #a5a5a5;
+}
+
+.course-bd .all {
+    display: block;
+    height: 38px;
+    border: 1px solid #00a4ff;
+    margin-top: 5px;
+    text-align: center;
+    line-height: 38px;
+    color: #00a4ff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* 精品推荐小模块 */
+/* 大盒子 */
+.goods {
+    height: 60px;
+    background-color: #fff;
+    margin-top: 10px;
+    /* 水平偏移0 垂直偏移4px 模糊距离3 阴影尺寸-2 颜色000，透明度0.3 */
+    box-shadow: 0 2px 10px -1px rgba(0, 0, 0, 0.3);
+    /* 行高会继承给3个孩子 */
+    line-height: 60px;
+}
+
+.goods h3 {
+    float: left;
+    margin-left: 30px;
+    font-size: 16px;
+    color: #00a4ff;
+
+}
+
+/* 2号盒子ul与h3的间距 */
+.goods-item {
+    float: left;
+    margin-left: 30px;
+}
+
+.goods-item li {
+    float: left;
+}
+
+.goods-item li a {
+    padding: 0 30px;
+    font-size: 16px;
+    color: #050505;
+    /* 给每个小a指定一个左边框 */
+    border-left: 1px solid #ccc;
+}
+
+.mod-interest {
+    float: right;
+    margin-right: 30px;
+    font-size: 14px;
+    color: #00a4ff;
+}
+
+/* 精品推荐大模块 */
+.box {
+    margin-top: 30px;
+}
+
+.box-hd {
+    height: 45px;
+}
+
+.box-hd h3 {
+    float: left;
+    font-size: 20px;
+    color: #494949;
+}
+
+.box-hd a {
+    float: right;
+    font-size: 12px;
+    color: #a5a5a5;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+
+/* 把li 的父亲ul 修改的足够宽一行能装开5个盒子就不会换行了 */
+.box-bd ul {
+    width: 1215px;
+}
+
+.box-bd ul li {
+    float: left;
+    width: 228px;
+    height: 270px;
+    background-color: #ffff;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+/* 把图片强制修改和盒子一样宽 就不会超出 */
+.box-bd ul li img {
+    width: 100%;
+}
+
+.box-bd ul li h4 {
+    margin: 20px 20px 20px 25px;
+    font-size: 14px;
+    color: #050505;
+    font-weight: 400;
+}
+
+.box-bd .info {
+    margin: 0 20px 0 25px;
+    font-size: 12px;
+    color: #999;
+}
+
+.box-bd .info span {
+    color: #ff7c2d;
+}
+
+/* 编程入门大模块 */
+.code {
+    margin-top: 40px;
+}
+
+.code-hd {
+    height: 45px;
+}
+
+.code-item h3 {
+    float: left;
+    font-size: 20px;
+    color: #494949;
+}
+
+
+.code-item ul {
+    float: left;
+    margin-left: 350px;
+}
+
+.code-item ul li {
+    float: left;
+}
+
+.code-item ul li a {
+    margin-top: 10px;
+    padding: 0 25px;
+    font-size: 12px;
+    color: #a5a5a5;
+}
+
+.code-item ul li a:hover {
+    color: #00a4ff;
+}
+
+.code-hd a {
+    float: right;
+    margin-top: 10px;
+    margin-right: 30px;
+    font-size: 12px;
+    color: #a5a5a5;
+}
+
+/* body */
+/* 前期用来自测布局 */
+/* .code-bd {
+    height: 392px;
+    background-color: #00a4ff;
+} */
+
+.code-nav img {
+    float: left;
+}
+
+.code-title img {
+    float: left;
+    margin-left: 15px;
+}
+
+.code-bd ul li {
+    float: left;
+    width: 228px;
+    height: 270px;
+    background-color: #fff;
+    margin-left: 15px;
+    margin-top: 22px;
+}
+
+.code-bd ul li img {
+    width: 100%;
+}
+
+.code-bd ul li h4 {
+    margin: 20px 20px 20px 25px;
+    margin-top: -100px;
+    font-size: 14px;
+    color: #050505;
+    font-weight: 400;
+}
+
+.code-bd .info {
+    margin: 0 20px 0 25px;
+    font-size: 12px;
+    color: #999;
+}
+
+.code-bd .info span {
+    color: #ff7c2d;
+}
+
+/* footer模块 */
+.footer {
+    margin-top: 40px;
+    height: 415px;
+    background-color: #fff;
+}
+
+.footer .w {
+    padding-top: 35px;
+}
+
+/* 左侧 */
+.copyright {
+    float: left;
+}
+
+.copyright p {
+    font-size: 12px;
+    color: #666;
+    margin: 20px 0 15px 0;
+}
+
+.copyright .app {
+    display: block;
+    width: 118px;
+    height: 33px;
+    border: 1px solid #00a4ff;
+    text-align: center;
+    line-height: 33px;
+    color: #00a4ff;
+    font-size: 16px;
+}
+
+/* 右侧 */
+.links {
+    float: right;
+}
+
+.links dl {
+    float: left;
+    margin-left: 100px;
+}
+
+.links dl dt {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.links dl dd a {
+    color: #333;
+    font-size: 12px;
+}

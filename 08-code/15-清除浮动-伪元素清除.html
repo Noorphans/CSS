@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 添加伪元素 ，伪元素默认是行内元素，要转为块级元素 */
+    .clearfix:after {
+      content: "";
+      display: block;
+      height: 0;
+      /* 核心语句 清除 */
+      clear: both;
+      visibility: hidden;
+    }
+
+    /* CSS为了兼容IE6、7 清除浮动的固定写法 */
+    .clearfix {
+      *zoom: 1;
+    }
+
+    .box {
+      width: 800px;
+      border: 1px solid blue;
+      margin: 0 auto;
+    }
+
+    .damao {
+      float: left;
+      width: 300px;
+      height: 200px;
+      background-color: purple;
+    }
+
+    .ermao {
+      float: left;
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+
+    .footer {
+      height: 200px;
+      background-color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 给父元素添加 -->
+  <div class="box clearfix">
+    <div class="damao">大毛</div>
+    <div class="ermao">二毛</div>
+  </div>
+  <div class="footer"></div>
+</body>
+
+</html>
