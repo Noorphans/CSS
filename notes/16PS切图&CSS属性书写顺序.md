@@ -164,10 +164,27 @@ PS 有很多的切图方式：图层切图、切片切图、PS 插件切图等�
 
 建议遵循以下顺序：
 
-1. **布局定位属性**：display / position / float / clear / visibility / overflow（建议 display 第一个写，毕竟关系到模式）
-2. **自身属性**：width / height / margin / padding / border / background
-3. **文本属性**：color / font / text-decoration / text-align / vertical-align / white- space / break-word
-4. **其他属性（CSS3）**：content / cursor / border-radius / box-shadow / text-shadow / background:linear-gradient …
+1. **布局定位属性**：（`建议 display 第一个写，毕竟关系到模式`）
+
+   display、 position、 float、 clear、 list-style、 visibility、 overflow
+
+2. **自身盒模型属性**：
+
+   width、 height、 margin、 padding、 border、 background: background-color、
+
+   background-image、 background-repeat、 background-position、background-size
+
+3. **文本属性**：
+
+   font：font-family、 font-size、 font-weight、 line-height、 color、
+
+   background: rgba、 text-decoration、 text-align、 vertical-align、 
+
+   white- space、 break-word
+
+4. **其他属性（CSS3）**：
+
+   content、 cursor、border-style、border-color、border-width、border-radius、box-shadow、outline(轮廓)、text-shadow 、background:linear-gradient …
 
 **举例：**
 
@@ -189,3 +206,29 @@ PS 有很多的切图方式：图层切图、切片切图、PS 插件切图等�
 
 
 
+
+
+## 扩展知识点
+
+**background: rgba书序CSS3的使用方法 所以放在字体font和颜色 color后面**
+
+
+
+### cursor属性
+
+* 用于`设置鼠标指针在元素上的样式`
+  1. 即当鼠标悬停在元素上时，鼠标指针的外观会根据该属性的值进行改变。
+  2. 这个属性通常用于提供用户界面的交互反馈，告诉用户元素可以被点击、拖拽或者是一个链接等。
+
+
+
+* `cursor` 属性可以接受多种值，常用的包括：
+  1. **auto**：浏览器自动选择合适的光标样式。
+  2. **pointer**：指示链接，通常是一个手型的光标。
+  3. **default**：默认光标，通常是一个箭头。
+  4. **move**：指示可移动的对象。
+  5. **text**：指示可编辑的文本。
+  6. **crosshair**：十字线光标，表示精确定位。
+  7. **wait**：表示等待，通常是一个沙漏或者旋转圈圈。
+  8. **help**：表示帮助，通常是一个问号。
+  9. **not-allowed**：表示禁止，通常是一个禁止符号。
