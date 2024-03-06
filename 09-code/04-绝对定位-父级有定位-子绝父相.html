@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>绝对定位-父级有定位</title>
+  <style>
+    /* 以最近一级有定位的父元素为参考点 */
+    .yeye {
+      position: relative;
+      width: 610px;
+      height: 610px;
+      padding: 50px;
+      background-color: palegoldenrod;
+    }
+
+
+    .father {
+      width: 600px;
+      height: 600px;
+      background-color: skyblue;
+    }
+
+    /* 父级有定位时不再以浏览器为准，而是在父盒子内部来回移动 */
+    .son1 {
+      position: absolute;
+      left: 400px;
+      bottom: 20px;
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+
+    .son2 {
+      width: 200px;
+      height: 200px;
+      background-color: plum;
+    }
+
+    .son3 {
+      width: 200px;
+      height: 200px;
+      background-color: aqua;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="yeye">grandfather
+    <div class="father">father
+      <div class="son1">son1</div>
+      <div class="son2">son2</div>
+      <div class="son3">son3</div>
+    </div>
+  </div>
+</body>
+
+</html>

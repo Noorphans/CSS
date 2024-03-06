@@ -297,6 +297,8 @@ a {
 }
 
 .box-bd ul li {
+    /* 子绝父相 */
+    position: relative;
     float: left;
     width: 228px;
     height: 270px;
@@ -306,8 +308,14 @@ a {
 }
 
 /* 把图片强制修改和盒子一样宽 就不会超出 */
-.box-bd ul li img {
+.box-bd ul li>img {
     width: 100%;
+}
+
+.box-bd ul li em {
+    position: absolute;
+    top: 4px;
+    right: -4px;
 }
 
 .box-bd ul li h4 {

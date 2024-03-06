@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>无祖先元素</title>
+  <style>
+    body {
+      background-color: #999;
+    }
+
+    .son {
+      position: absolute;
+      /* 靠浏览器左上角 */
+      top: 10px;
+      left: 10px;
+
+      /* 靠浏览器右上角 */
+      /* top: 100px;
+      right: 200px; */
+
+      /* 浏览器左下角 */
+      /* bottom: 0;
+      left: 0; */
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="father">
+    <div class="son"></div>
+  </div>
+</body>
+
+</html>
