@@ -210,6 +210,8 @@ PS 有很多的切图方式：图层切图、切片切图、PS 插件切图等�
 
 ## 扩展知识点
 
+### background: rgba
+
 **background: rgba书序CSS3的使用方法 所以放在字体font和颜色 color后面**
 
 
