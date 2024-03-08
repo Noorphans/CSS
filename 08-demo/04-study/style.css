@@ -86,7 +86,7 @@ a {
     color: #00a4ff;
 }
 
-/* 搜索模块 */
+/* ------搜索模块------- */
 .search {
     float: left;
     width: 412px;
@@ -173,7 +173,7 @@ a {
     color: #00a4ff;
 }
 
-/* 课程表模块 */
+/* -----课程表模块----- */
 
 /* 大盒子 */
 .course-hd {
@@ -231,7 +231,7 @@ a {
     text-align: center;
 }
 
-/* 精品推荐小模块 */
+/* -----精品推荐小模块----- */
 /* 大盒子 */
 .goods {
     height: 60px;
@@ -275,7 +275,7 @@ a {
     color: #00a4ff;
 }
 
-/* 精品推荐大模块 */
+/* ------精品推荐大模块----- */
 .box {
     margin-top: 30px;
 }
@@ -342,7 +342,7 @@ a {
     color: #ff7c2d;
 }
 
-/* 编程入门大模块 */
+/* ----编程入门大模块----- */
 .code {
     margin-top: 40px;
 }
@@ -433,7 +433,7 @@ a {
     color: #ff7c2d;
 }
 
-/* footer模块 */
+/* ---footer模块--- */
 .footer {
     height: 415px;
     margin-top: 40px;
