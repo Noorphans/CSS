@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      width: 1002px;
+      margin: 0 auto;
+    }
+
+    .ad-l {
+      position: fixed;
+      top: 200px;
+      left: 50%;
+      /* 1002÷2  版心的一半 + 120px 盒子自己的宽度 + 10px的缝隙*/
+      margin-left: -631px;
+    }
+
+    .ad-r {
+      position: fixed;
+      top: 200px;
+      right: 50%;
+      margin-right: -631px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- 左右两侧的广告图片
+  固定在浏览器可视窗口的左右两侧
+  不会随窗口一起滚动，并且要贴着版心的边缘；
+   -->
+  <div class="box">
+    <img src="../images/box.png" alt="">
+  </div>
+  <!-- 左右的固定定位 -->
+  <img src="../images/ad-l.png" alt="" class="ad-l">
+  <img src="../images/ad-r.png" alt="" class="ad-r">
+</body>
+
+</html>

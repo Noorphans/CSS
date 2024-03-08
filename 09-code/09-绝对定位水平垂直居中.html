@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 水平垂直居中 */
+    .box {
+      position: absolute;
+      /* 1. left或top 走 50%  父容器宽度或高度的一半 */
+      left: 50%;
+      top: 50%;
+      width: 200px;
+      height: 200px;
+      /* 2. margin 负值 往左边走 自己盒子宽度或高度的一半 */
+      /* margin: -100px -100px; */
+      margin-left: -100px;
+      margin-top: -100px;
+      /* 不加绝对定位时可居中 */
+      /* margin: auto; */
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+</body>
+
+</html>

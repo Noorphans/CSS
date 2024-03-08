@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      position: relative;
+      width: 800px;
+      height: 400px;
+      background-color: palegoldenrod;
+    }
+
+    .sbox {
+      width: 200px;
+      height: 100px;
+      background-color: pink;
+    }
+
+    /* 1号水平居中靠上对齐 */
+    .son1 {
+      position: absolute;
+      left: 50%;
+      margin-left: -100px;
+
+    }
+
+    /* 2号水平居中靠下对齐 */
+    .son2 {
+      position: absolute;
+      left: 50%;
+      margin-left: -100px;
+      /* 靠下对齐 再加上两个子盒占位宽度200 */
+      margin-top: 300px;
+      /* 简写 */
+      /* margin: 300px -100px; */
+
+    }
+
+    /* 3号垂直居中靠左对齐*/
+    .son3 {
+      position: absolute;
+      top: 50%;
+      margin-top: -50px;
+    }
+
+    /* 4号垂直居中靠右对齐 */
+    .son4 {
+      position: absolute;
+      top: 50%;
+      margin-top: -50px;
+      /* 靠右对齐 再加上两个子盒占位宽度400 */
+      margin-left: 600px;
+      /* margin: -50px 600px; */
+    }
+
+    /* 5号水平垂直居中对齐 */
+    .son5 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -100px;
+      margin-top: -50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="sbox son1">1号水平居中靠上对齐</div>
+    <div class="sbox son2">2号水平居中靠下对齐</div>
+    <div class="sbox son3">3号垂直居中靠左对齐</div>
+    <div class="sbox son4">4号垂直居中靠右对齐</div>
+    <div class="sbox son5">5号水平垂直居中对齐</div>
+  </div>
+</body>
+
+</html>
