@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 使用边框属性 */
+    .box1 {
+      width: 0;
+      height: 0;
+      /* 简写 */
+      /* border: 10px solid skyblue; */
+
+      /* 分写 */
+      border-top: 10px solid plum;
+      border-right: 10px solid papayawhip;
+      border-bottom: 10px solid skyblue;
+      border-left: 10px solid gray;
+    }
+
+    .box2 {
+      width: 0;
+      height: 0;
+      margin: 100px auto;
+      /* 1. 先全部变为透明色 */
+      border: 50px solid transparent;
+      /* 2.top为三角 */
+      /* border-top-color: plum; */
+
+      /* 3.left为三角 */
+      border-top-color: gray;
+      font-size: 0;
+      line-height: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1"></div>
+  <div class="box2"></div>
+</body>
+
+</html>

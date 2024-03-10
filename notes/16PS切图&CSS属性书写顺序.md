@@ -176,11 +176,7 @@ PS 有很多的切图方式：图层切图、切片切图、PS 插件切图等�
 
 3. **文本属性**：
 
-   font：font-family、 font-size、 font-weight、 line-height、 color、
-
-   background: rgba、 text-decoration、 text-align、 vertical-align、 
-
-   white- space、 break-word
+   font：font-family、 font-size、 font-weight、 line-height、 color、background: rgba、 text-decoration、 text-align、 vertical-align、 white- space、 break-word
 
 4. **其他属性（CSS3）**：
 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box1 {
+      position: relative;
+      width: 120px;
+      height: 249px;
+      margin: 100px auto;
+      background-color: skyblue;
+    }
+
+    span {
+      position: absolute;
+      right: 15px;
+      /* border是5px，那么四个边都是5，下和上是5，高度top就是10 */
+      top: -10px;
+      width: 0;
+      height: 0;
+      font-size: 0;
+      line-height: 0;
+      border: 5px solid transparent;
+      border-bottom-color: skyblue;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1">仿京东三角制作
+    <span></span>
+  </div>
+</body>
+
+</html>
