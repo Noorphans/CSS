@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #ccc;
+        }
+
+        div {
+            position: relative;
+            /* width: 150px;
+            height: 300px; */
+
+            /* 将宽高缩小为原来的一半 */
+            width: 75px;
+            height: 150px;
+            margin: 50px auto;
+            /* 左边框设置黑色背景 */
+            /* border-left: 150px solid #000; */
+            border-left: 75px solid #000;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+
+        div::before {
+            /* 放在盒子中心的上方 */
+            position: absolute;
+            left: -37.5px;
+            height: 15px;
+            width: 15px;
+            border: 30px solid #000;
+            background-color: #fff;
+            content: '';
+            border-radius: 50%;
+        }
+
+        div::after {
+            /* 放在盒子中心的下方 */
+            position: absolute;
+            /* left: -75px; */
+
+            /* 将位置调整为宽度的一半 */
+            left: -37.5px;
+            bottom: 0px;
+            /* width: 30px;
+            height: 30px; */
+
+            /* 将大小调整为原来的一半 */
+            width: 15px;
+            height: 15px;
+            /* border: 60px solid #fff; */
+            border: 30px solid #fff;
+            background-color: #000;
+            content: '';
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
