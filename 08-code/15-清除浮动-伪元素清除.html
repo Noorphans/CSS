@@ -8,12 +8,13 @@
   <style>
     /* 添加伪元素 ，伪元素默认是行内元素，要转为块级元素 */
     .clearfix:after {
-      content: "";
       display: block;
-      height: 0;
       /* 核心语句 清除 */
       clear: both;
+      height: 0;
+      content: "";
       visibility: hidden;
+
     }
 
     /* CSS为了兼容IE6、7 清除浮动的固定写法 */
@@ -23,8 +24,8 @@
 
     .box {
       width: 800px;
-      border: 1px solid blue;
       margin: 0 auto;
+      border: 1px solid blue;
     }
 
     .damao {

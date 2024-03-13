@@ -170,17 +170,15 @@ PS 有很多的切图方式：图层切图、切片切图、PS 插件切图等�
 
 2. **自身盒模型属性**：
 
-   width、 height、 margin、 padding、 border、 background: background-color、
-
-   background-image、 background-repeat、 background-position、background-size
+   width、 height、 margin、 padding、 border、 background: background-color、background-image、 background-repeat、 background-position、background-size
 
 3. **文本属性**：
 
-   font：font-family、 font-size、 font-weight、 line-height、 color、background: rgba、 text-decoration、 text-align、 vertical-align、 white- space、 break-word
+   font：font-style、font-weight、font-size、line-height、font-family、color、background: rgba、 text-decoration、 text-align、text-indent、 vertical-align、 white- space、 break-word
 
 4. **其他属性（CSS3）**：
 
-   content、 cursor、border-style、border-color、border-width、border-radius、box-shadow、outline(轮廓)、text-shadow 、background:linear-gradient …
+   content、opacity、 cursor、border-style、border-color、border-width、border-radius、box-shadow、outline(轮廓)、text-shadow 、background:linear-gradient …
 
 **举例：**
 
