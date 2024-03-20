@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    span {
+      transform: translate(300px, 300px);
+    }
+
+    a {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      background-color: palegoldenrod;
+      /* translate 对于行内元素是无效的 */
+      transform: translate(30px, 50px);
+    }
+  </style>
+</head>
+
+<body>
+  <span>我是span 无效</span>
+  <a href="">我是a已转换</a>
+</body>
+
+</html>

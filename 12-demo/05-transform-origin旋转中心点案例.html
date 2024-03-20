@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            float: left;
+            /* 大盒子隐藏 */
+            overflow: hidden;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            border: 1px solid pink;
+        }
+
+        div::before {
+            /* 子盒子旋转 */
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: plum;
+            content: "sally";
+            transform: rotate(180deg);
+            transform-origin: left bottom;
+            transition: all 0.4s;
+        }
+
+        /* 改为了180，鼠标经过div 里面的before 复原为初始0*/
+
+        div:hover::before {
+            transform: rotate(0deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #333;
+        }
+
+        /* 1.大盒子背景图 */
+        .map {
+            position: relative;
+            width: 747px;
+            height: 616px;
+            margin: 0 auto;
+            background: url(../images/map.png) no-repeat;
+        }
+
+        /* 2.城市旁边放小圆点位置 */
+        .city {
+            position: absolute;
+            top: 227px;
+            right: 193px;
+            /* color: #fff; */
+        }
+
+        /* 台北 */
+        .tb {
+            top: 500px;
+            right: 80px;
+        }
+
+        /* 广州 */
+        .gz {
+            top: 550px;
+            right: 195px;
+        }
+
+
+        /* 3.小圆点 */
+        .dotted {
+            width: 8px;
+            height: 8px;
+            background-color: #09f;
+            border-radius: 50%;
+        }
+
+        /*4.波纹移动到圆点中间 */
+        .city div[class^="pulse"] {
+            /* 保证我们小波纹在父盒子里面水平垂直居中 放大之后就会中心向四周发散 */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            box-shadow: 0 0 12px #009dfd;
+            /* 6.动画效果 */
+            animation: pulse 1.2s linear infinite;
+        }
+
+        /* 7.第二个波纹延迟0.4  */
+        .city div.pulse2 {
+            animation-delay: 0.4s;
+        }
+
+        .city div.pulse3 {
+            animation-delay: 0.8s;
+        }
+
+        /* 5.定义动画 */
+        @keyframes pulse {
+            0% {}
+
+            70% {
+                /* transform: scale(5);  
+                我们不要用scale 因为他会让 阴影变大*/
+                width: 40px;
+                height: 40px;
+                opacity: 1;
+            }
+
+            100% {
+                width: 70px;
+                height: 70px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="map">
+        <div class="city">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+        <div class="city tb">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+        <div class="city gz">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+    </div>
+</body>
+
+</html>
