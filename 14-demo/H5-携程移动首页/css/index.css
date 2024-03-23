@@ -1,0 +1,385 @@
+body {
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    color: #000;
+    background: #f2f2f2;
+    /* 隐藏水平方向上的溢出部分，并且不会显示滚动条*/
+    overflow-x: hidden;
+    /*点击高亮我们需要清除清除 设置为transparent 完成透明*/
+    -webkit-tap-highlight-color: transparent;
+    /* height: 2000px; */
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+/* ---------顶部搜索模块-------- */
+.search-index {
+    display: flex;
+    position: fixed;
+    top: 0;
+    /* 有定位不能margin居中，left移动50% */
+    left: 50%;
+    /* 再向左移动自身宽度的一半 */
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    /* 固定的盒子应该有宽度 */
+    width: 100%;
+    height: 44px;
+    /* 固定定位跟父级没有关系 它以屏幕为准,所以要限制宽度*/
+    min-width: 320px;
+    max-width: 540px;
+    /* background-color: pink; */
+    background-color: #F6F6F6;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+}
+
+/* ---------搜索模块 内容填充------- */
+.search {
+    position: relative;
+    height: 26px;
+    margin: 7px 10px;
+    padding-left: 25px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    line-height: 24px;
+    color: #666;
+    /* 头像盒子宽44，左边盒子不给宽度分配剩余空间 给父元素添加flex */
+    flex: 1;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+
+}
+
+/* -----搜索图标---- */
+.search::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    background: url(../images/sprite.png) no-repeat -59px -279px;
+    background-size: 104px auto;
+}
+
+/* ----头像盒子---- */
+.user {
+    width: 44px;
+    height: 44px;
+    /* background-color: plum; */
+    font-size: 12px;
+    color: #2eaae0;
+    text-align: center;
+}
+
+/* ----用户头像---- */
+.user::before {
+    display: block;
+    width: 23px;
+    height: 23px;
+    background: url(../images/sprite.png) no-repeat -59px -194px;
+    background-size: 104px auto;
+    margin: 4px auto -2px;
+    content: '';
+}
+
+
+/* -------焦点轮播图focus模块------- */
+.focus {
+    padding-top: 44px;
+}
+
+.focus img {
+    width: 100%;
+}
+
+/* ------局部导航栏 景点玩乐-------- */
+.local-nav {
+    display: flex;
+    height: 64px;
+    margin: 3px 4px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.local-nav li {
+    /* 每个小li占一分空间 */
+    flex: 1;
+}
+
+.local-nav a {
+    display: flex;
+    flex-direction: column;
+    /* 侧轴居中对齐 因为是单行 */
+    align-items: center;
+    font-size: 12px;
+}
+
+.local-nav li [class^="local-nav-icon-icon"] {
+    width: 32px;
+    height: 32px;
+    margin-top: 8px;
+    /* background-color: pink; */
+    background: url(../images/localnav_bg.png) no-repeat 0 0;
+    background-size: 32px auto;
+}
+
+.local-nav li .local-nav-icon-icon2 {
+    background-position: 0 -32px;
+}
+
+.local-nav li .local-nav-icon-icon3 {
+    background-position: 0 -64px;
+}
+
+.local-nav li .local-nav-icon-icon4 {
+    background-position: 0 -96px;
+}
+
+.local-nav li .local-nav-icon-icon5 {
+    background-position: 0 -128px;
+}
+
+
+/* ---------主导航栏-------- */
+nav {
+    /* 切掉直角边 */
+    overflow: hidden;
+    margin: 0 4px 3px;
+    border-radius: 8px;
+}
+
+.nav-common {
+    display: flex;
+    height: 88px;
+    /* background-color: pink; */
+}
+
+/* 第二个中盒子上下外边距给3px */
+.nav-common:nth-child(2) {
+    margin: 3px 0;
+}
+
+/* 三个中盒子背景线性渐变 */
+.nav-common:nth-child(1) {
+    background: -webkit-linear-gradient(left, #FA5A55, #FA994D);
+}
+
+.nav-common:nth-child(2) {
+    background: -webkit-linear-gradient(left, #4B90ED, #53BCED);
+}
+
+.nav-common:nth-child(3) {
+    background: -webkit-linear-gradient(left, #34C2A9, #6CD559);
+}
+
+/* 小盒子各占一份空间 分为三等份 */
+.nav-items {
+    /* 不冲突的 */
+    flex: 1;
+    /* 子元素a的父亲 需要flex */
+    display: flex;
+    /* 主轴为列y 文字竖着排列 */
+    flex-direction: column;
+}
+
+
+.nav-items a {
+    flex: 1;
+    font-size: 14px;
+    line-height: 44px;
+    color: #fff;
+    text-align: center;
+    /* 文字阴影 */
+    text-shadow: 1px 1px rgba(0, 0, 0, .2);
+}
+
+.nav-items a:nth-child(1) {
+    border-bottom: 1px solid #fff;
+}
+
+/* 第一列盒子里的a去掉下边框 */
+.nav-items:nth-child(1) a {
+    border: 0;
+    background: url(../images/hotel.png) no-repeat bottom center;
+    background-size: 121px auto;
+}
+
+.nav-common:nth-child(2) .nav-items:nth-child(1) a {
+    border: 0;
+    background: url(../images/flight.png) no-repeat bottom center;
+    background-size: 42px auto;
+}
+
+.nav-common:nth-child(3) .nav-items:nth-child(1) a {
+    border: 0;
+    background: url(../images/vacation.png) no-repeat bottom center;
+    background-size: 42px auto;
+}
+
+/* ------盒子之间的竖框间隔--------*/
+/* -n+2就是选择前面两个元素 加边框*/
+.nav-items:nth-child(-n+2) {
+    border-right: 1px solid #fff;
+}
+
+
+/* ------侧导航栏入口 电话卡--------- */
+.subnav-entry {
+    display: flex;
+    margin: 0 4px;
+    padding: 5px 0;
+    border-radius: 8px;
+    background-color: #fff;
+    flex-wrap: wrap;
+}
+
+.subnav-entry li {
+    /* 里面的子盒子可以写%, 相对于父级来说的 */
+    /* 父盒100%，子盒子20%占5份 */
+    flex: 20%;
+}
+
+.subnav-entry a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subnav-entry-icon {
+    width: 28px;
+    height: 28px;
+    margin-top: 4px;
+    /* background-color: pink; */
+    background: url(../images/subnav-bg.png) no-repeat;
+    background-size: 28px auto;
+}
+
+
+/* -------销售模块------ */
+.sales-box {
+    margin: 4px;
+    border-top: 1px solid #bbb;
+    background-color: #fff;
+}
+
+.sales-hd {
+    position: relative;
+    height: 44px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* 方便搜索引擎 写上标题 但隐藏 */
+.sales-hd h2 {
+    overflow: hidden;
+    text-indent: -999px;
+}
+
+.sales-hd h2::after {
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    width: 79px;
+    height: 15px;
+    content: "";
+    background: url(../images/hot.png) no-repeat 0 -20px;
+    background-size: 79px auto;
+}
+
+.more {
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    padding: 3px 20px 3px 10px;
+    color: #fff;
+    border-radius: 15px;
+    background: -webkit-linear-gradient(left, #FF506C, #FF6BC6);
+}
+
+.more::after {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    content: "";
+    transform: rotate(45deg);
+}
+
+.row {
+    display: flex;
+}
+
+.row a {
+    flex: 1;
+    border-bottom: 1px solid #eee;
+}
+
+.row a:nth-child(1) {
+    border-right: 1px solid #eee;
+}
+
+.row a img {
+    width: 100%;
+}
+
+/* ------底部模块------- */
+footer {
+    height: 64px;
+    margin: 4px;
+    border-bottom: 1px solid #bbb;
+    background-color: #fff;
+}
+
+footer ul {
+    display: flex;
+}
+
+footer ul li {
+    flex: 1
+}
+
+footer ul li a {
+    display: flex;
+    font-size: 12px;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+footer ul li [class^="local-nav-icon-icon"] {
+    width: 17px;
+    height: 17px;
+    margin: 10px;
+    background-color: pink;
+    background: url(../images/sprite.png) no-repeat -59px -153px;
+    background-size: 104px auto;
+}
+
+
+footer ul li .local-nav-icon-icon2 {
+    background-position: -60px -173px;
+}
+
+footer ul li .local-nav-icon-icon3 {
+    background-position: -60px -310px;
+}

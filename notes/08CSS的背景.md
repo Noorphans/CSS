@@ -594,6 +594,80 @@ CSS3 为我们提供了背景颜色半透明的效果
 
 
 
+## 背景线性渐变
+
+* 线性渐变是一种 CSS 背景样式，它允许你在两个或多个指定的颜色之间创建平滑的过渡。
+* 在线性渐变中，颜色从一个点开始，沿着指定的方向线性地渐变到另一个点。
+* 语法：
+
+```css
+background: -webkit-linear-gradient(起始方向, 颜色1, 颜色2, ...);
+```
+
+> * 背景渐变`必须添加浏览器私有前缀`
+> * 起始方向可以是： 方位名词 或者 度数 ， 如果**省略默认就是 top**
+
+
+
+### 线性渐变-起始方向之方位名词
+
+```css
+ /* 1.默认起始位置top，上黄下紫 */
+background: -webkit-linear-gradient(yellow, plum);
+ /* 2.左黄右紫 */
+background: -webkit-linear-gradient(left, yellow, plum); 
+/* 3.左上角橘色到右下角绿色的渐变*/
+background: -webkit-linear-gradient(left top,orange, green);
+```
+
+![image-20240323114613496](http://images.newstar.net.cn/sally-imgsimage-20240323114613496.png) 
+
+
+
+
+
+### 线性渐变-起始方向之度数
+
+```css
+background: -webkit-linear-gradient(135deg, deeppink, orange);
+background: -webkit-linear-gradient(270deg, deeppink, orange);
+background: -webkit-linear-gradient(45deg, deeppink, orange);
+```
+
+![image-20240323120819930](http://images.newstar.net.cn/sally-imgsimage-20240323120819930.png) 
+
+
+
+
+
+### 线性渐变-复杂示例&透明渐变
+
+1. **复杂渐变**
+
+可以创建更复杂的渐变，包括多个颜色和位置值。位置值指定了渐变的起始和结束位置。
+
+```css
+ background: -webkit-linear-gradient(45deg, red 0%, blue 30%, green 70%, yellow 100%);
+```
+
+![image-20240323121548803](http://images.newstar.net.cn/sally-imgsimage-20240323121548803.png) 
+
+
+
+2. **透明渐变**
+
+```css
+background: -webkit-linear-gradient(right, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5));
+```
+
+![image-20240323121925558](http://images.newstar.net.cn/sally-imgsimage-20240323121925558.png) 
+
+
+
+
+
+
+
 
 
 

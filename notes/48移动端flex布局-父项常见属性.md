@@ -2,7 +2,11 @@
 
 
 
-## flex布局父项常见属性
+# flex布局父项常见属性
+
+
+
+
 
 * 以下由6个属性是对父元素设置的:
   1. flex-direction：设置主轴的方向
@@ -11,6 +15,8 @@
   4. align-content：设置侧轴上的子元素的排列方式（多行）
   5. align-items：设置侧轴上的子元素排列方式（单行）
   6. flex-flow：复合属性，相当于同时设置了 flex-direction 和 flex-wrap
+
+
 
 
 
