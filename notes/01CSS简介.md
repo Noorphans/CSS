@@ -149,6 +149,16 @@
 
 
 
+## 代码规范
 
+> 1. 类名语义化,尽量精短、明确，必须以字母开头命名，且`全部字母为小写`，单词之间统一使用短划线“`-`”或下划线“`_`” 连接
+> 2. `类名嵌套层`次尽量`不超过三层`
+> 3. `尽量避免直接使用元素选择器`
+> 4. 属性书写顺序
+>    布局定位属性：display / position / float / clear / visibility / overflow
+>    尺寸属性：width / height / margin / padding / border / background
+>    文本属性：color / font / text-decoration / text-align / vertical-align
+>    其他属性（CSS3）：content / cursor / border-radius / box-shadow / text-shadow
+> 5. `避免使用id选择器`
+> 6. `避免使用通配符*和!important`
 
- 

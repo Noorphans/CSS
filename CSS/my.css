@@ -1,0 +1,10 @@
+body {
+  background-color: #ccc;
+}
+div {
+  background: -webkit-linear-gradient(top left, orange, green);
+  font-size: 14px;
+}
+a {
+  font-size: 14px;
+}
