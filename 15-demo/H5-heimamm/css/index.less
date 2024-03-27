@@ -1,0 +1,257 @@
+body {
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto;
+  background-color: #f2f4f7;
+}
+
+a {
+  text-decoration: none;
+}
+
+// 约束当屏幕大于 750px 的时候，html字体大小就不不变化了 
+// flexible.js默认10等份 改为了20等份 750/20=37.5
+@media screen and (min-width: 750px) {
+  html {
+    // iPhone6/7/8 开发像素是375px js把它分为10等份，所以375/10=37.5px
+    font-size: 37.5px !important;
+  }
+}
+
+// -------第一个模块大盒子-----
+.warp {
+  background-color: #fff;
+  padding-bottom: 1.146667rem;
+}
+
+// -----顶部区域----------
+.header {
+  height: 2.1333rem;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 0.933333rem;
+  line-height: 2.133333rem;
+  color: #1c1c1c;
+  text-align: center;
+}
+
+// ------导航栏部分-------
+.nav {
+  display: flex;
+  //显示不开就换行
+  flex-wrap: wrap;
+  padding: 1.2rem 0 1.6rem 0;
+
+  .item {
+    display: flex;
+    width: 33.33%;
+    //主轴设为y 纵向显示
+    flex-direction: column;
+    // x为侧轴，水平居中
+    align-items: center;
+
+    img {
+      width: 3.7067rem;
+      height: 3.7067rem;
+    }
+
+    span {
+      font-size: 0.666667rem;
+      color: #707070;
+    }
+
+    // 选择前面三个 -n + 3 选择前3个
+    &:nth-child(-n+3) {
+      margin-bottom: 1.653333rem;
+    }
+  }
+
+}
+
+// ----go图片区域-------
+.go {
+  margin: 0 0.266667rem 0 0.48rem;
+}
+
+// ----第二大盒子-----
+.content {
+  margin-top: 0.266667rem;
+  padding: 1.066667rem 0.64rem;
+  background-color: #fff;
+
+  .con-hd {
+    display: flex;
+    // 先两边贴边 
+    justify-content: space-between;
+    height: 1.013333rem;
+    margin-bottom: 0.906667rem;
+    // background-color: pink;
+    line-height: 1.013333rem;
+
+    h4 {
+      margin: 0;
+      font-size: 0.746667rem;
+      color: #333333;
+
+      .icon {
+        display: inline-block;
+        width: 1.013333rem;
+        height: 1.013333rem;
+        // 因为文字图片默认基线对齐，添加这个代码，让后面的文字垂直居中
+        vertical-align: bottom;
+      }
+    }
+
+    .more {
+      font-size: 0.586667rem;
+      color: #999999;
+    }
+  }
+}
+
+.get_job_focus {
+  position: relative;
+
+  .swiper-container {
+    // width: 100%;
+    // 根据需求把宽度定位 540px
+    width: 14.4rem;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* ---Center slide text vertically-- */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    // 主轴设为y 竖向显示
+    flex-direction: column;
+
+    /* ---Center slide text vertically-- */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    transition: 300ms;
+
+    // 其余的兄弟是 0.8
+    transform: scale(0.8);
+    opacity: 0.4;
+
+    a {
+      width: 9.013333rem;
+      height: 10.026667rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    p {
+      width: 9.013333rem;
+      font-size: 0.666667rem;
+      margin-top: 0.64rem;
+      color: #333;
+    }
+  }
+
+  // 当前选中的 slide   中间那个
+  .swiper-slide-active,
+  .swiper-slide-duplicate-active {
+    transform: scale(1);
+    z-index: 999;
+    opacity: 1;
+  }
+
+  // 箭头样式
+  .swiper-button-next,
+  .swiper-button-prev {
+    outline: none;
+
+    &:after {
+      font-size: 1.066667rem;
+      color: #333;
+    }
+  }
+}
+
+
+// -----充电学习模块----------
+.study_con {
+  padding-bottom: 3.733333rem;
+}
+
+// ---学习模块的轮播图----
+.study {
+  .study_fo {
+    padding: 0.266667rem;
+  }
+
+  .swiper-slide {
+    width: 7.733333rem;
+    height: 9.066667rem;
+    background: #fff;
+    background-color: #fff;
+    font-size: 18px;
+    border-radius: 0.266667rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    h5 {
+      margin: 0.533333rem 0;
+      padding: 0 0.266667rem;
+      font-weight: 400;
+      font-size: 0.693333rem;
+    }
+
+    p {
+      padding: 0 0.266667rem;
+      font-size: 0.693333rem;
+      color: #ff4400;
+    }
+  }
+}
+
+// --------底部区域----------
+.footer {
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2.933333rem;
+  padding: 0.533333rem;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+  z-index: 99999;
+
+  .item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 1.04rem;
+      height: 1.093333rem;
+    }
+
+    p {
+      font-size: 0.586667rem;
+      color: #666666;
+      margin-top: 0.266667rem;
+    }
+  }
+}
