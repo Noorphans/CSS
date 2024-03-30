@@ -1,0 +1,204 @@
+// 导入初始化样式
+@import url(./base.less);
+
+// 声明基准值变量 后面所有数字/3.75即可
+@baseSize: 3.75vmin;
+
+// --------------头部模块---------------
+
+// ---头部大盒子---
+.suspension {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  // 压住主体模块，叠放在上面
+  z-index: 999;
+
+
+  // ----头部内容填充 上部分------
+  .m-navbar {
+    display: flex;
+    // 沿着主轴两边贴边，中间留白
+    justify-content: space-between;
+    align-items: center;
+    height: (44 / @baseSize);
+    padding: 0 (12 / @baseSize) 0 (18 / @baseSize);
+
+
+    // ------左侧区域-------
+    .logo {
+      i {
+        font-size: (28 / @baseSize);
+        color: #fb7299;
+      }
+    }
+
+    // -------右侧区域-------
+    .right {
+      // 右侧三个盒子在一行 所以加flex
+      display: flex;
+
+      .search {
+        color: #ccc;
+
+        i {
+          font-size: (22 / @baseSize);
+        }
+      }
+
+      .face {
+        // 切掉溢出圆角部分
+        overflow: hidden;
+        width: (24 / @baseSize);
+        height: (24 / @baseSize);
+        margin: 0 (20 / @baseSize);
+        border-radius: 50%;
+        // background-color: plum;
+
+      }
+
+      .app-btn {
+        width: (72 / @baseSize);
+        height: (24 / @baseSize);
+        // background-color: gray;
+      }
+    }
+
+  }
+
+  // -------头部内容填充 下部分---------
+  .channel-menu {
+    // line用的绝对定位 子绝父相
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    // 沿着侧轴居中
+    align-items: center;
+    height: (40 / @baseSize);
+    border-bottom: 1px solid #e7e7e7;
+    // background-color: plum;
+
+    // ------左侧频道区域--------
+    .tabs {
+      overflow: hidden;
+      flex: 1;
+
+      .tabs-list {
+        display: flex;
+
+        a {
+          height: (40 / @baseSize);
+          padding: 0 (16 / @baseSize);
+          font-size: (14 / @baseSize);
+          line-height: (40 / @baseSize);
+          // 强制文字不换行
+          white-space: nowrap;
+        }
+
+        // ----a下面的红色线-----
+        .line {
+          position: absolute;
+          left: (16 / @baseSize);
+          bottom: 0;
+          width: (28 / @baseSize);
+          height: (2 / @baseSize);
+          background-color: #fb7299;
+        }
+      }
+    }
+
+    // ---------右侧图标区域------
+    .after {
+      width: (40 / @baseSize);
+      height: (39 / @baseSize);
+      line-height: (39 / @baseSize);
+      color: #ccc;
+      text-align: center;
+      background-color: #fff;
+
+      i {
+        font-size: (20 / @baseSize);
+      }
+    }
+  }
+}
+
+// --------------------主体模块------------------
+.m-home {
+  padding: (85 / @baseSize) (5 / @baseSize) 0;
+
+  // -------主体模块 内容填充--------
+  .video-list {
+    display: flex;
+
+    // 强制弹性盒子换行
+    flex-wrap: wrap;
+
+    .video-item {
+      width: 50%;
+      padding: (8 / @baseSize) (5 / @baseSize);
+      // background-color: pink;
+
+      // ------卡片盒模块 上部分--------
+      .card {
+        position: relative;
+        height: (97 / @baseSize);
+
+        // --------播放量 下部分----------
+        .count {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          // 绝对定位不给宽度默认内容大小
+          width: 100%;
+          height: (27 / @baseSize);
+          padding: 0 (5 / @baseSize);
+          // background-color: pink;
+          background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, .8) 100%);
+          font-size: (12 / @baseSize);
+          color: #fff;
+
+          // 保持播放量与字体图标中线对齐
+          .mini-icon {
+            display: inline-block;
+            vertical-align: middle;
+          }
+
+        }
+      }
+
+
+      .title {
+        margin-top: (5 / @baseSize);
+        font-size: (12 / @baseSize);
+      }
+    }
+
+  }
+}
+
+
+// ----------------底部模块--------------------
+.app {
+  position: fixed;
+  left: 0;
+  bottom: (30 / @baseSize);
+  width: 100%;
+  height: (38 / @baseSize);
+
+  .btn-app {
+    height: (38 / @baseSize);
+    margin: 0 (20 / @baseSize);
+    background-color: #fb7299;
+    line-height: (38 / @baseSize);
+    color: #fff;
+    text-align: center;
+    border-radius: (19 / @baseSize);
+    box-shadow: 0 0.53333vmin 2.66667vmin rgb(0 0 0 / 20%);
+  }
+}

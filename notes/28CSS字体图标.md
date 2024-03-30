@@ -201,3 +201,71 @@ IcoMoon 成立于 2011 年，推出了第一个自定义图标字体生成器，
 
 ![1571520617270](http://images.newstar.net.cn/sally-imgs%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87%E5%8A%A0%E8%BD%BD%E7%9A%84%E5%8E%9F%E7%90%86.gif) 
 
+
+
+## 扒网页字体图标
+
+1. 首先找到对方的图标位置
+
+![image-20240329202104655](http://images.newstar.net.cn/sally-imgsimage-20240329202104655.png) 
+
+2. 在页面中找到[字体图标](https://so.csdn.net/so/search?q=字体图标&spm=1001.2101.3001.7020)元素对应的css文件，点击css文件，再点击在另一窗口打开
+
+![image-20240329202534892](http://images.newstar.net.cn/sally-imgsimage-20240329202534892.png) 
+
+3. 在打开的css文件中找到以` .eot 、.ttf 、.svg 、.woff`文件结尾的文件，并复制到新的地址栏回车 下载下来，放到自己项目新建的fonts文件夹下
+
+![image-20240329202603857](http://images.newstar.net.cn/sally-imgsimage-20240329202603857.png) 
+
+> 注意.svg结尾的文件把路径复制到地址栏后，按回车键不会下载，此时需要手动右键下载（右键存储为）
+
+4. 整个字体图标样式，也就是打开的这个css文件，也一起下载下来,全部复制到自己目录下新建的fonts文件夹下的iconfont.css里，此文件css名称可自行定义
+
+![image-20240329204310631](http://images.newstar.net.cn/sally-imgsimage-20240329204310631.png) 
+
+
+
+
+
+5. 找到对应位置，并右键单击复制元素
+
+![image-20240330132054852](http://images.newstar.net.cn/sally-imgsimage-20240330132054852.png) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

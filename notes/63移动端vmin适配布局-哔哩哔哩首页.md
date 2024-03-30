@@ -1,0 +1,118 @@
+[toc]
+
+
+
+> 为了照顾手机端横屏下 展示内容更多，选择改为vmin单位，根据窗口尺寸最小值为准
+
+
+
+## 字体素材下载
+
+检查元素 → iconfont样式表 → 复制字体URL到浏览器地址栏 → 回车
+
+
+
+
+
+## 准备工作：项目目录及文件
+
+根目录（ Bilibili）
+
+![image-20240329204746327](http://images.newstar.net.cn/sally-imgsimage-20240329204746327.png) 
+
+
+
+## 头部布局
+
+ ### suspension-box 布局
+
+头部盒子不用给高，宽度100%，固定定位
+
+
+
+![image-20240329204822623](http://images.newstar.net.cn/sally-imgsimage-20240329204822623.png) 
+
+
+
+### m-navbar 布局
+
+m指的是mobile
+
+![image-20240329204902329](http://images.newstar.net.cn/sally-imgsimage-20240329204902329.png) 
+
+
+
+### channel-menu 布局
+
+![image-20240329205005968](http://images.newstar.net.cn/sally-imgsimage-20240329205005968.png) 
+
+
+
+
+
+
+
+### tabs布局
+
+![image-20240329221220148](http://images.newstar.net.cn/sally-imgsimage-20240329221220148.png) 
+
+
+
+## 主体布局
+
+### m-home 布局
+
+![image-20240329205053678](http://images.newstar.net.cn/sally-imgsimage-20240329205053678.png) 
+
+
+
+![image-20240330102316482](http://images.newstar.net.cn/sally-imgsimage-20240330102316482.png) 
+
+1. 用1vm的话 盒子得有宽度，分配才更合适，但是我们知道里面盒子是各占一半，那宽度就是各占50%
+2. 如果里面小盒子采用百分比布局 那么就不能用margin值，肯定会挤掉下来
+3. 但是里面小盒子确实是各占50%，不能改为49%，缝隙会偏大
+4. 大盒子m-home，假如缝隙距离是10px，先给大盒子一个(上40px 下44px )85px上内边距，左右padding 5像素的内边距，这5px的内边距就留出来
+5. 然后再给里面子盒子 内边距5px，加起来就是10px
+6. padding值包含在50%里面，因为CSS3盒子模型是包含padding的
+7. **vedio-list**：
+   * list集合 里面放多个小a，是为了给下一个动画做准备。当点击动画，第二个list显示， 第一个list就隐藏，以此类推
+   * 通过list集合控制里面的小a，所以必须加list
+   * 里面的小a 各占50%，且有宽度，高度不用给 内容自动撑开盒子。采用flex布局，但只要给父盒子添加flex布局，里面所有子盒子都会沿着主轴一行排列，所以强制换行flex-wrap
+
+
+
+![image-20240330125158846](http://images.newstar.net.cn/sally-imgsimage-20240330125158846.png)
+
+![image-20240330125357013](http://images.newstar.net.cn/sally-imgsimage-20240330125357013.png) 
+
+* 给count大盒子一个左右的内边距，然后justify-content: space-between;两边贴边
+
+
+
+
+
+* 扒网页字体图标，找到对应位置 右键单击复制元素
+
+![image-20240330132202550](http://images.newstar.net.cn/sally-imgsimage-20240330132202550.png)
+
+
+
+ 
+
+### vedio-item 布局
+
+![image-20240329205120557](http://images.newstar.net.cn/sally-imgsimage-20240329205120557.png) 
+
+
+
+
+
+## 底部模块
+
+![image-20240330144228032](http://images.newstar.net.cn/sally-imgsimage-20240330144228032.png) 
+
+
+
+1. 给一个div盒子固定定位，靠下对齐，居中给个left 50%，transform：translateX(-50%),实现靠下居中对齐
+2. 因为是通栏的不需要水平居中，直接先建一个大盒子采取固定定位，给个宽高，left0 ，bottom 30px。里面再套一个小盒子，给个高度，上下外边距0，左右外边距20px，在设置圆角为19px
+3. 或者大盒子不给宽度，子盒给个左右内边距 往中间挤，就不用margin0，atuo

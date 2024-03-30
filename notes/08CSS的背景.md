@@ -650,11 +650,20 @@ background: -webkit-linear-gradient(45deg, deeppink, orange);
  background: -webkit-linear-gradient(45deg, red 0%, blue 30%, green 70%, yellow 100%);
 ```
 
+**解析：**
+
+* 45deg，表示渐变的方向，从左上角到右下角的斜向渐变。
+* 百分比，是渐变中的颜色停止点。它们指定了渐变中每个颜色的位置。从 0% 到 30% 的距离，渐变从红到蓝；从30%到70%的距离，渐变从蓝到绿；从70%到100%的距离，渐变从绿到黄。
+
+
+
 ![image-20240323121548803](http://images.newstar.net.cn/sally-imgsimage-20240323121548803.png) 
 
 
 
-2. **透明渐变**
+
+
+3. **透明渐变**
 
 ```css
 background: -webkit-linear-gradient(right, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5));
@@ -663,6 +672,20 @@ background: -webkit-linear-gradient(right, rgba(255, 0, 0, 0.5), rgba(0, 0, 255,
 ![image-20240323121925558](http://images.newstar.net.cn/sally-imgsimage-20240323121925558.png) 
 
 
+
+4. 背景图片透明渐变
+
+```css
+background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, .8) 100%);
+background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .8) 100%);
+background-image: linear-gradient(transparent, black);
+```
+
+**解析：**
+
+* 三个效果相同，前两个，0% 表示这个颜色停止点在渐变的起始位置，100% 表示这个颜色停止点在渐变的结束位置。
+* 都是从完全透明到不透明黑色的水平线性渐变背景，起始点在顶部，结束点在底部
+* 只不过前两个语法包含了一个中间状态，即透明度从0逐渐增加到0.8的过程。
 
 
 

@@ -7,18 +7,20 @@
   <title>Document</title>
   <style>
     html {
-      font-size: 10px;
+      font-size: 12px;
     }
 
     div {
       font-size: 12px;
+      /* div也给个rem div和p的盒子都用的rem，若想一起变小 只需要把html文字大小14px改为12px*/
       width: 15rem;
       height: 15rem;
       background-color: plum;
     }
 
     p {
-      /*  1.rem 相对于 html元素 字体大小来说的 */
+      /*  1.rem 相对于 html元素 字体大小来说的 ，所以div的文字大小对p来说无效*/
+      /* rem是14像素，14rem是14*10等于140rem的盒子 */
       width: 10rem;
       height: 10rem;
       background-color: pink;

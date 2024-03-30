@@ -124,7 +124,7 @@ justify-content属性 定义了项目在主轴上的对齐方式
 
 ![image-20240322203806307](http://images.newstar.net.cn/sally-imgsimage-20240322203806307.png) 
 
-
+> **注：** 只要给**父盒子添加flex**布局,里面所有**子盒子都会沿着主轴一行排列**,所以强制`flex-wrap换行`
 
 
 

@@ -1,0 +1,226 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+.container {
+  background-color: #fff;
+}
+
+
+/* bootstrap-v4 修改屏幕宽度方式 */
+/* @media screen and (min-width:1280px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1280px
+  }
+} */
+
+/* 修改container的最大宽度为 1280 根据设计稿来走的 */
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1280px;
+  }
+}
+
+/* ----------------左侧区域------------------ */
+
+/* 大号盒子的左内边距去掉 权重不够重新加个类名 或者直接最高权重 */
+header {
+  padding-left: 0 !important;
+}
+
+/* -------左侧上方logo部分------- */
+.logo {
+  background-color: #429ad9;
+}
+
+.logo img {
+  display: block;
+  /* width: 100%; */
+
+  /* logo图片不需要缩放 图片宽度不超过100 */
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* 1.首先在超小屏幕下  logo里面的图片就隐藏起来 logo里的img添加类hidden-xs */
+/* 2. 其次先在logo里面准备好一个盒子span写上阿里百秀，visible-xs它平时是隐藏起来的，只有在超小屏幕下显示 */
+.logo span {
+  display: block;
+  height: 50px;
+  font-size: 18px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+}
+
+/* ------左侧下方nav导航栏区域--- */
+.nav {
+  border-bottom: 1px solid #ccc;
+  background-color: #eee;
+}
+
+/* ------nav导航栏 内容填充----- */
+.nav a {
+  display: block;
+  height: 50px;
+  padding-left: 30px;
+  font-size: 16px;
+  line-height: 50px;
+}
+
+.nav a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* ----a标签前面插入的图标--- */
+.nav a::before {
+  padding-right: 5px;
+  vertical-align: middle;
+}
+
+/* 1.当进入 小屏幕和超小屏幕时，nav里面的li浮动起来 并且宽度为 20%  */
+@media screen and (max-width: 991px) {
+  .nav li {
+    float: left;
+    width: 20%;
+  }
+}
+
+/* 2.当进入 超小屏幕时, nav里的小a文字变小一些 会变成14px  */
+@media screen and (max-width: 767px) {
+  .nav li a {
+    padding-left: 3px;
+    font-size: 14px;
+  }
+
+  /* 3. 当处于 超小屏幕时，新闻news的第一个li宽度为 100%，剩下的小li各 50%  */
+  .news li:nth-child(1) {
+    width: 100% !important;
+  }
+
+  .news li {
+    width: 50% !important;
+  }
+
+
+  /* 4.当进入 超小屏幕时, 发表模块标题变小一些 会变成14px  */
+  .publish h3 {
+    font-size: 14px;
+  }
+
+}
+
+/* ---------------中间区域article---------------- */
+
+/* ------新闻模块------ */
+.news li {
+  float: left;
+  width: 25%;
+  height: 128px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+/* 第一个小li  盒子宽度大一些*/
+.news li:nth-child(1) {
+  width: 50%;
+  height: 266px;
+  /* background-color: pink; */
+}
+
+.news li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* background-color: plum; */
+}
+
+.news li a img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 所有小li盒子里面的p文字样式 */
+.news li a p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 41px;
+  margin-bottom: 0;
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, .5);
+  font-size: 12px;
+  color: #fff;
+}
+
+/* 第一个小li里面的p 文字居中，上下内边距0*/
+.news li:nth-child(1) p {
+  padding: 0 10px;
+  font-size: 20px;
+  line-height: 41px;
+}
+
+/* ----------发表模块------- */
+.publish {
+  /* 新闻模块里的盒子给了浮动，导致border跑上面去了，所以新闻模块要清除浮动 */
+  border-top: 1px solid #ccc;
+}
+
+.publish .row {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.pic {
+  margin-top: 10px;
+}
+
+.pic img {
+  /* 图片跟着一起缩放 */
+  width: 100%;
+}
+
+
+/* ------------右侧区域-------- */
+.banner img {
+  width: 100%;
+}
+
+.hot {
+  display: block;
+  margin-top: 20px;
+  padding: 0 20px 20px;
+  border: 1px solid #ccc;
+}
+
+.hot span {
+  margin-bottom: 20px;
+  border-radius: 0;
+}
+
+.hot p {
+  font-size: 12px;
+}
